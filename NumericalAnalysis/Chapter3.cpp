@@ -94,7 +94,6 @@ void Question_40::calculate(){
     std::cout<<"经过列主元消元法后所得的增广矩阵为："<<std::endl;
     for(auto x=A1.begin();x!=A1.end();x++){
         for(auto i = x->begin();i != x->end();i++)
-        
             std::cout<<std::left<<std::setw(10)<<*i<<"   ";
         std::cout<<std::endl;
     }
@@ -111,7 +110,8 @@ void Question_40::calculate(){
     std::cout<<"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"<<std::endl;
     std::cout<<"方程的解从x0 x1 。。。xn依次为"<<std::endl;
     for(auto x=result.rbegin();x!=result.rend();x++){
-        std::cout << std::setprecision(5)<<std::setw(10)<<*x;
+        //std::cout << std::setprecision(5)<<std::setw(10)<<*x;
+        std::cout <<std::setw(10)<<*x;
     }
     std::cout<<std::endl;
 }

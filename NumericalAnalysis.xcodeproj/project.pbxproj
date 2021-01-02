@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		779B655C25A0141600B969AC /* Chapter5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 779B655A25A0141600B969AC /* Chapter5.cpp */; };
+		779B656025A02F3400B969AC /* Chapter7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 779B655E25A02F3400B969AC /* Chapter7.cpp */; };
 		77A090D2255F993400EA7F6A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77A090D1255F993400EA7F6A /* main.cpp */; };
 		77A090DB255F99C200EA7F6A /* Chapter1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77A090D9255F99C200EA7F6A /* Chapter1.cpp */; };
 		77A090DF255FA87800EA7F6A /* Chapter2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77A090DD255FA87800EA7F6A /* Chapter2.cpp */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		779B655A25A0141600B969AC /* Chapter5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Chapter5.cpp; sourceTree = "<group>"; };
+		779B655B25A0141600B969AC /* Chapter5.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Chapter5.hpp; sourceTree = "<group>"; };
+		779B655E25A02F3400B969AC /* Chapter7.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Chapter7.cpp; sourceTree = "<group>"; };
+		779B655F25A02F3400B969AC /* Chapter7.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Chapter7.hpp; sourceTree = "<group>"; };
 		77A090CE255F993400EA7F6A /* NumericalAnalysis */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NumericalAnalysis; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A090D1255F993400EA7F6A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		77A090D9255F99C200EA7F6A /* Chapter1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Chapter1.cpp; sourceTree = "<group>"; };
@@ -73,6 +79,10 @@
 				77A090DE255FA87800EA7F6A /* Chapter2.hpp */,
 				77A090E1255FC12500EA7F6A /* Chapter3.cpp */,
 				77A090E2255FC12500EA7F6A /* Chapter3.hpp */,
+				779B655A25A0141600B969AC /* Chapter5.cpp */,
+				779B655B25A0141600B969AC /* Chapter5.hpp */,
+				779B655E25A02F3400B969AC /* Chapter7.cpp */,
+				779B655F25A02F3400B969AC /* Chapter7.hpp */,
 			);
 			path = NumericalAnalysis;
 			sourceTree = "<group>";
@@ -134,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A090DF255FA87800EA7F6A /* Chapter2.cpp in Sources */,
+				779B655C25A0141600B969AC /* Chapter5.cpp in Sources */,
 				77A090D2255F993400EA7F6A /* main.cpp in Sources */,
+				779B656025A02F3400B969AC /* Chapter7.cpp in Sources */,
 				77A090DB255F99C200EA7F6A /* Chapter1.cpp in Sources */,
 				77A090E3255FC12500EA7F6A /* Chapter3.cpp in Sources */,
 			);

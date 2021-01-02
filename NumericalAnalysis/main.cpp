@@ -10,6 +10,9 @@
 #include "Chapter1.hpp"
 #include "Chapter2.hpp"
 #include "Chapter3.hpp"
+#include "Chapter5.hpp"
+#include "Chapter7.hpp"
+#include <math.h>
 using namespace::std;
 
 //第二章所需要计算的函数
@@ -19,14 +22,39 @@ float f(float x ){
 float f1(float x ){
     return x*x -1;
 }
+/////////////////////////////////
+//第五章所需要的积分函数
+double f_5(double x ){
+    return 1 / (1+x*x*100.0);
+    //return sin(x)/x;
+}
 
+/////////////////////////////////
+//第七章所需要好的函数
+float f_x_t(float x,float t){
+    return 0;
+}
+float fai(float x){
+    return exp(x);
+}
+float alpha(float t){
+    return exp(t);
+}
+float beta(float t){
+    return exp(t+1);
+}
+/////////////////////////////////
 void solution_for_chapter1();
 void solution_for_chapter2();
 void solution_for_chapter3();
+void solution_for_chapter5();
+void solution_for_chapter7();
 int main(int argc, const char * argv[]) {
-    solution_for_chapter1();
-    solution_for_chapter2();
-    solution_for_chapter3();
+//    solution_for_chapter1();
+//    solution_for_chapter2();
+//    solution_for_chapter3();
+    solution_for_chapter5();
+    solution_for_chapter7();
     return 0;
 }
 void solution_for_chapter1(){
@@ -100,4 +128,32 @@ void solution_for_chapter3(){
     cout<<"第三章解题结束"<<endl;
     cout<<"******************************************"<<endl;
     cout<<endl;
+}
+void solution_for_chapter5(){
+    cout<<"******************************************"<<endl;
+    cout<<"第五章解题开始"<<endl;
+    //Romberg solution(1.0,5.0,0.5e-07,&f_5);
+    Romberg solution(-1.0,1.0,0.5e-07,&f_5);
+    solution.calculate();
+    solution.result_print();
+}
+void solution_for_chapter7(){
+    cout<<"******************************************"<<endl;
+    cout<<"第七章解题开始"<<endl;
+    for(int time = 0;time<2;time++){
+        cout<<"^^^^^^^^^^^^^^^^^^^^^^"<<endl;
+        int M =40*pow(2,time);
+        cout<<"当前步长为1/"<<M<<endl;
+        Question10 solution(&f_x_t,&fai,&alpha,&beta,1,M,40);
+        auto result = solution.calculate();
+        for(int i=1;i<5;i++){
+            cout<<"在点("<<0.2*i<<",1.0)处的数值解为:  ";
+            int x_index = int(0.2*M*i-1);
+            float estimated_value = result.back()[x_index];
+            float exact_value = exp(1+0.2*i);
+            cout<<setprecision(10)<<estimated_value;
+            cout<<"   与真实解的 误差为: " <<abs(estimated_value-exact_value)<<endl;
+        }
+    }
+    
 }
